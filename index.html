@@ -1,0 +1,324 @@
+<!----In HTML you need to focus their connection to each one, make sure that your assign names is very readable to know what it is for----->
+
+
+<!----HTML (the Hypertext Markup Language) and CSS (Cascading Style Sheets) are two of the core technologies for building Web pages. HTML provides the structure of the page, CSS the (visual and aural) layout, for a variety of devices.----->
+<!DOCTYPE html>
+
+<!----HTML Attribute lang="en" - is to identify the language text content----->
+<html lang="en">
+
+<!----HTML head container for data information about data specify character set----->
+<head>
+
+    <!----Auto size to fit correctly on all devices----->
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    
+    <!----charset="UTF-8" is translates it into a string of binary (Unicode character)----->
+    <meta charset="UTF-8">
+
+    <!----Title of Website----->
+    <title>Photography</title>
+
+    <!----CSS link "style.css"----->
+    <link rel="stylesheet" href="style.css">
+
+</head><!----</> is a closing tags----->
+
+
+<!----h1,h2,h3,h4,h5,h6 is a heading size have 6 heading levels, h1 is the highest heading level----->
+
+
+<!----Main body of Website----->
+<body>
+    <!--- <script>
+//Welcome Alert
+    alert("Welcome to Photography Website");
+    </script> ---->
+
+
+
+<!----section="" is for element creating more sections or group in website----->
+<!----SECTION 1----->
+<section id="mains">
+
+<!----class="" attribute is class name for element use for CSS to design----->
+<!----Staring 1st DIV is container of HTML Elements----->
+    <div class="main">
+
+<!----Welcome----->
+    <div class="content">
+    <span class="title">Welcome to </span><!----span is inline container or one line----->
+    <h1>Photography <span><br> Portfolio </span></h1><!----<br> is breakline use to skip 1 line----->
+    <p>Our Website have many features about posting different kind <br> of Picture like arts and beautiful scenes. This Website is for school purposes only. Kindly click button below to visit.</p><!----<p> is represent a paragraph----->
+
+
+<!----Visit Design/AboutUs Button----->
+    <ul><!----Unordered list ="ul"----->
+
+<!----a href is hypertext reference use to address to another----->
+    <a href="#designs" class="btn">Visit Design</a> 
+    <a href="#services" class="btn">About Us</a>
+
+    </ul>
+
+<!----This is for Music or Play button----->
+    <div class="playmusic">
+        <img src="img/music/play.png" id="icon" class="play">
+    </div>
+
+<!----audio is to embed sounds content in file directory----->
+    <audio id="mySong">
+        <source src="img/music/mainbgm.mp3" type="audio/mp3"><!----specifies multiple media resources for the picture,video,audio----->
+    </audio>
+
+
+<!----Javascript for Playing and switching play/pause icon and playing music----->
+    <script>   
+        
+//script is HTML Element that executable code
+//function code
+
+//getting song and icons using id="mySong" & id="icon"
+        var mySong = document.getElementById("mySong");
+        var icon = document.getElementById("icon");
+
+//if else statement for switching play/pause icon using condition
+        icon.onclick = function(){
+
+        if(mySong.paused){
+        mySong.play();
+        icon.src = "img/music/pause.png";
+        }else{
+        mySong.pause();
+        icon.src = "img/music/play.png";
+        }
+
+        }
+    </script>
+    </div>
+    </div><!----End DIV----->
+</section>  
+<!----END of Section1----->
+
+
+
+
+
+<!----SECTION 2 for Design Photos----->
+<section id="designs" class="section2">
+
+
+    <script>
+// If your click the button (More) the alert script function
+//Alert script or notification
+
+
+//if else statement to pop up a message to section directory
+    function more() {
+    let text = "Visit About us?\nOK or Cancel.";
+    if (confirm(text) == true) {
+    text = "(OK) © This Website DOES NOT Promote or Encourage any Illegal Activities, All Content Provided by this website is meant for Educational Purposes Only." ;
+    } else {
+    text = "(Cancel) Appreciate! Enjoy and Explore to our Website. This Website is for School Purposes Only!";
+    }
+    document.getElementById("demo").innerHTML = text;
+    }
+    </script>
+
+
+    <div>
+<!----Back Button----->
+    <a href="#services" class="btn"  style="margin-left: 20px; margin-top: 30px;" onclick="more()">About</a>
+    </div>
+
+
+<!--Flip Card for Design -->
+<div class="grids3">
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img/designs/1.png" alt="Avatar" style="width:250px;height:500px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Flip Image</h1> 
+      <br>
+      <p>Shot by Darwin Gacer</p> 
+      <p>BSCS 1A</p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img/designs/2.png" alt="Avatar" style="width:250px;height:500px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>ADVENTURE</h1> 
+      <br>
+      <p>Shot by ISSA DIMAYACYAC</p> 
+      <p>BSCS 1A</p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img/designs/3.png" alt="Avatar" style="width:250px;height:500px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>SUNSET</h1> 
+      <br>
+      <p>Shot by EMMAN MANALO</p> 
+      <p>BSCS 1A</p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img/designs/5.png" alt="Avatar" style="width:250px;height:500px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>NATURE</h1> 
+      <br>
+      <p>Shot by LENAR YOLOLA</p>
+      <p>BSCS 1A</p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img/designs/7.png" alt="Avatar" style="width:250px;height:500px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>TRAVEL</h1> 
+    <br>
+      <p>Shot by MIKAELA VILLEGAS</p> 
+      <p>BSCS 1A</p>
+  </div>
+</div>
+</div>
+
+</section>
+<!----END of Section1----->
+
+
+<!----SECTION 3 for About Album----->
+<!----services id for 1 file css file and for directory----->
+<section id="services" class="section3">
+
+  
+    <div>
+<!----Back Button----->
+    <a href="#section4id" class="btn" style="margin-left: 20px; margin-top: 30px;">More Photo's</a>
+    </div>
+    <div class="services container">
+    <div class="service-top">
+    </div>
+
+<!----About Design----->
+    <div class="service-bottom">
+
+    <div class="service-item">
+
+    <div class="icon"><img src="img/bgfile/thumb2.png" style="border-radius: 20px; object-fit: cover; max-width: 100vmax; max-height: 100vmax;"></div>
+
+    <h2><span style="color: red; margin-left: 10px; object-fit: cover;"> About </span>Design</h2>
+
+    <p style="color: lightblue; margin-left: 10px;  font-family: 'Sora', sans-serif; "> All Design and Picture is school purposes only.</p><br>
+    <p style="color: lightblue; margin-left: 10px;  font-family: 'Sora', sans-serif; "> Design in this Website is inspired to Greek Mythology Design</p><br>
+    <br><br>
+    <!----Group Members----->
+    <h2><span style="color: red; margin-left: 10px; ">Developers</span> of this website</h2>
+    <p style="color: lightblue; margin-left: 10px;  font-family: 'Sora', sans-serif;"> Our Social Media Account :</p><br>
+    <br>
+
+<!----FB Profile Linking----->   
+    <ul>
+    <a href="https://www.facebook.com/Darwingacer22" class="dawenfb">view profile</a>
+    <a href="https://www.facebook.com/JenIssaDimayacyac" class="issafb">view profile</a>
+    <a href="https://www.facebook.com/emmanuel.manalo.315" class="emmanfb">view profile</a>
+    <a href="https://www.facebook.com/Lenar.Andrei.1920" class="lenarfb">view profile</a>
+    <a href="https://www.facebook.com/mikajan.villegas" class="mikafb">view profile</a>
+    </ul>
+
+<!----Website Picture Members----->     
+    <ul>
+    <img class="members" src="img/members/darwin.jpg">
+    <img class="members" src="img/members/issa.jpg">
+    <img class="members" src="img/members/emman.jpg">
+    <img class="members" src="img/members/lenar.jpg">
+    <img class="members" src="img/members/mika.jpg">
+    <ul>
+
+<!----Script alert for more() function in about-----> 
+    <div class="scriptalert"> 
+    <p id="demo"></p>
+    </div>
+    </div>
+    </div>
+</section> 
+
+
+<!----End of Section2----->
+
+
+
+
+<!----SECTION 4 for OTHER PHOTO----->
+<!----services id for 1 file css file and for directory----->
+<section id="section4id" class="section4">
+    <div>
+    <!----Back Button----->
+    <a href="#" class="btn" style="margin-left: 20px; margin-top: 30px;">Home</a>
+    </div>
+    <div class="services">
+    <div class="service-top">
+    </div>
+
+    <div class="service-bottom">
+
+<!----OTHER PHOTO----->
+    <div class="service-item">
+    <div class="icon"><img src="img/bgfile/thumb3.png"  style="border-radius: 20px; "></div>
+    <h2><span style="color: lightblue; margin-left: 10px;  font-family: 'Sora', sans-serif; "> More about Photography</span> </h2><br>
+    <p style="color: lightblue; margin-left: 10px;  font-family: 'Sora', sans-serif;">Scroll to View more Photo's</p><br>
+    </div>
+
+<!----Images for Other Photo----->
+    <div class="grids">
+       <img class="mySlide" src="img/designs/1.png">
+       <img class="mySlide" src="img/designs/2.png">
+       <img class="mySlide" src="img/designs/3.png">
+       <img class="mySlide" src="img/designs/4.png">
+       <img class="mySlide" src="img/designs/5.png">
+       <img class="mySlide" src="img/designs/6.png">
+       <img class="mySlide" src="img/designs/1.png">
+       <img class="mySlide" src="img/designs/2.png">
+       <img class="mySlide" src="img/designs/3.png">
+       <img class="mySlide" src="img/designs/4.png">
+       <img class="mySlide" src="img/designs/5.png">
+       <img class="mySlide" src="img/designs/6.png">
+       <img class="mySlide" src="img/designs/4.png">
+       <img class="mySlide" src="img/designs/5.png">
+       <img class="mySlide" src="img/designs/6.png">
+       <img class="mySlide" src="img/designs/6.png">
+       <img class="mySlide" src="img/designs/4.png">
+       <img class="mySlide" src="img/designs/5.png">
+       <img class="mySlide" src="img/designs/6.png">
+       <img class="mySlide" src="img/designs/6.png">
+    </div>
+    </div>
+    </div>
+</section> 
+<section id="section4id" class="section5">
+
+</section>
+</body>
+</html>
